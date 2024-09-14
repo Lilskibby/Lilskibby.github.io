@@ -72,16 +72,17 @@ hr{
 }
 
 .album{
-    height: 60%;
+    height: 40%;
     width: auto;
     background-image: url(../resources/20240910_0163_LL.jpg);
     background-size: cover;
     background-attachment: scroll;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-attachment: fixed;
     background-position: center;    
     justify-items: center;
     text-align: center;
+    align-items: center;
     padding: auto;
     font-family: sans-serif;
     font-weight: 800;
