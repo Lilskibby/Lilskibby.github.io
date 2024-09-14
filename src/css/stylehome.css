@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+    height: 2000px;
+}
+
+#dropdown{
+    background-color: rgba(53, 7, 53, 0.973);
+    height: 200px;
+    width: auto;
+    font-size: larger;
+    align-items: center;
+    line-height: 300%;
+    display: none;
+    flex-direction: column;
+    visibility: collapse;
+    transition:cubic-bezier();
+}
+
+.navbarbuttons{
+    color: white;
+    text-decoration: none;
+}
+
+.navbarbuttons:hover{
+    color: gray;
+    transition: .3s;
+}
+
+hr{
+    width: auto;
+    display: block;
+    height: 2px;
+    border-color: white;
+}
+
+.nav{
+    display: flex;
+    height: 5%;
+    width: auto;
+    background-color: rgba(53, 7, 53, 0.973);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Courtyardtext{
+    font-size: x-large;
+    padding-left: 20px;
+    padding-top: auto;
+    padding-bottom: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: white;
+}
+
+
+#menuicon{  
+    padding-top: auto;
+    padding-bottom: auto;
+    height: 40%;
+    object-fit: contain;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.album{
+    height: 40%;
+    width: auto;
+    background-image: url(../resources/20240910_0163_LL.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;    
+    justify-items: center;
+    text-align: center;
+    padding: auto;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: xx-large;
+    display: grid;
+}
+
+#albumtext{
+    padding-top: 250px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    justify-self: center;
+}
+
+#albumname{
+
+    font-size: 200%;
+
+}
+
+.eleventhirty{
+
+    height: 20%;
+    background-color:rgba(53, 7, 53, 0.973);
+
+}
+
+
