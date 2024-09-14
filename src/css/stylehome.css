@@ -72,7 +72,7 @@ hr{
 }
 
 .album{
-    height: 40%;
+    height: 60%;
     width: auto;
     background-image: url(../resources/20240910_0163_LL.jpg);
     background-size: cover;
@@ -100,7 +100,7 @@ hr{
 
 #albumname{
 
-    font-size: 200%;
+    font-size: 40pt;
 
 }
 
