@@ -19,27 +19,3 @@ function dropdown(){
     }
 }
 
-function iconhover(type){
-
-    switch(type){
-
-        case facebook:
-            const facebook = getElementById("facebook")
-            facebook.src = "resources/facebook_gray.png"
-            break;
-        case instagram:
-            const instagram = getElementById("instagram")
-            break;
-        case youtube: 
-        const youtube = getElementById("youtube")
-            break;
-        case tiktok:
-            const tiktok = getElementById("tiktok")
-            break;
-
-
-
-    }
-
-
-}
