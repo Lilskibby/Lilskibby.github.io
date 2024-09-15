@@ -9,7 +9,7 @@
 }
 
 body{
-    height: 2000px;
+    height: 1900px;
 }
 
 #dropdown{
@@ -72,17 +72,16 @@ hr{
 }
 
 .album{
-    height: 40%;
+    z-index: -1;
+    height: 50%;
     width: auto;
     background-image: url(../resources/20240910_0163_LL.jpg);
     background-size: cover;
-    background-attachment: scroll;
-    background-repeat: repeat-y;
     background-attachment: fixed;
+    background-repeat: repeat-y;
     background-position: center;    
-    justify-items: center;
+    justify-content: center;
     text-align: center;
-    align-items: center;
     padding: auto;
     font-family: sans-serif;
     font-weight: 800;
@@ -100,9 +99,7 @@ hr{
 }
 
 #albumname{
-
-    font-size: 40pt;
-
+    font-size: 35pt;
 }
 
 .eleventhirty{
@@ -141,3 +138,58 @@ hr{
     transition: .3s;
 }
 
+.shows{
+    font-family: sans-serif;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    font-size: 40pt;
+    height: 13%;
+    font-weight: 600;
+    padding: 20px;
+    font-style: italic;
+}
+
+@media only screen and (min-width: 600px) {
+    .shows {
+      height: 7%
+    }
+}
+
+.showsub{
+    font-size: 12pt;
+    font-style: normal;
+    line-height: 200%;
+    font-weight: 200;
+}
+
+.contact{
+    font-size: 25pt;
+    text-align: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    align-items: center;
+    align-content: center;
+    padding-top: 20px;
+}
+
+.socialicons{
+    width: 3%;
+}
+
+@media only screen and (max-width: 600px) {
+    .socialicons {
+      width: 8%
+    }
+}
+
+#attributions{
+    line-height: 20%;
+    padding-bottom: 20px;
+}
+
+.attribution{
+    font-weight: 100;
+    font-size: 6pt;
+}
