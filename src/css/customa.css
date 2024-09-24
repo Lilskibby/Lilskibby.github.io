@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0 0 0 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+.navbar{
+    background-color: rgba(53, 7, 53, 0.973);
+    margin: 0 0 0;
+}
+
+.navbar-brand{
+    font-weight: 900;
+    padding-left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#about{
+    font-size: x-large;
+    display: inline-flex;
+    font-weight: 800;
+    text-shadow: 2px 2px 3px black;
+    background-image: url(../resources/20240910_0416_LL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#abouttxt{
+    color: white;
+    width: 30%;
+    align-self: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+
+#aboutimg{
+    width: 40%;
+    object-fit: cover;
+    padding: 20px;
+}
+
+hr{
+    width: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    #about{
+        display: block;
+    }
+    #abouttxt {
+      width: 100%
+    }
+    #aboutimg{
+        width: 100%;
+    }
+    #meet{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .mugshot{
+        width: 200%;
+    }
+}
+
+#meet{
+    font-size: x-large;
+    color:white;
+    font-weight: 900;
+    background-color: rgba(53, 7, 53, 0.973);
+    text-align: center;
+    overflow: hidden;
+    justify-content: center;   
+    height: 700px;
+    margin-top: -10px;
+}
+
+.mugshot{
+    padding: none;
+    align-self: center;
+    float: center;
+    width: 350px;
+    border-radius: 10px;
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+.item{
+    padding-top: 50px;
+    display: flex;
+    margin-inline: auto;
+    text-align: center;
+
+}
+
+.item.active{
+    float: center;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+#items{
+    height: 700px;
+}
+
+@media only screen and (max-width: 600px) {
+
+s
+    .carousel-caption{
+        bottom: 30%;
+    }
+}
+
+#myCarousel{
+    height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-caption{
+    float: center;
+    height: 20%;    
+    bottom: 10%;    
+}
+
+.carousel-caption p{
+    padding-top: 20px;
+    font-weight:  200;
+    font-size: medium;
+    width: 100%;
+    text-align: center;
+    float: center;
+    padding-top: none;
+    align-self: center;
+}
+
+h3{
+
+    font-weight: 900;
+}
+
+p, h3{
+    margin: 0
+
+}
+
+@media only screen and (max-width: 600px) {
+    .mugshot{
+        width: 50%;
+    }
+    
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;  
+}
