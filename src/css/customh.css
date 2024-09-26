@@ -52,6 +52,18 @@ body{
     
 }
 
+@media (hover: none) {
+    #album {
+        background-attachment: scroll;
+    }
+ }
+
+@media (pointer: coarse) {
+    #album {
+        background-attachment: scroll;
+    }
+}
+
 #albumtext{
     padding-top: 350px;
     display: flex;
