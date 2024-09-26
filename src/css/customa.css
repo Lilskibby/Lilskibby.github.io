@@ -39,8 +39,17 @@ html, body{
 }
 
 #myNavbar{
-
     padding-right: 30px;
+}
+
+.navbar-collapse{
+
+    padding-left: 30px;
+}
+
+.icon-bar{
+
+    padding-left: 15px;
 }
 
 #about{
@@ -65,6 +74,7 @@ html, body{
     align-self: center;
     padding-bottom: 30px;
     padding-top: 20px;
+    padding-inline: 10px;
 }
 
 
