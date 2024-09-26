@@ -10,15 +10,27 @@
 }
 
 html, body{
-
     width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.navbarbuttons{
+    color: white;
+    text-decoration: none;
+}
+
+.navbarbuttons:hover{
+    color: gray;
+    transition: .3s;
 }
 
 .navbar{
     background-color: rgba(53, 7, 53, 0.973);
     margin: 0 0 0;
-    
+    border-radius: 0 0 0 0;
 }
+
 
 .navbar-brand{
     font-weight: 900;
@@ -26,11 +38,16 @@ html, body{
     font-family: 'Courier New', Courier, monospace;
 }
 
+#myNavbar{
+
+    padding-right: 30px;
+}
+
 #about{
     font-size: x-large;
     display: inline-flex;
     font-weight: 800;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 3px 3px 4px black;
     background-image: url(../resources/20240910_0416_LL.jpg);
     background-repeat: no-repeat;
     background-size: cover;
