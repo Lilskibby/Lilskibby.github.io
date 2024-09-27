@@ -1,0 +1,37 @@
+body{
+    text-align: center;
+    align-items: center;
+    background-color: rgba(53, 7, 53, 0.973);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: x-large;
+    color: white;
+    line-height: 400%;
+}
+
+a{
+    margin: 100px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:hover{
+
+    color: gray; 
+    transition: .3s;
+}
+
+.fourohfour{
+
+    font-size: 64pt;
+    font-weight:900;
+}
+
+#notfound{
+    top: 35%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    position: fixed;
+}
