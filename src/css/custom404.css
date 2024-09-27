@@ -6,7 +6,7 @@ body{
     font-weight: 500;
     font-size: x-large;
     color: white;
-    line-height: 400%;
+    line-height: 350%;
 }
 
 a{
@@ -26,6 +26,11 @@ a:hover{
 
     font-size: 64pt;
     font-weight:900;
+}
+
+.badrq{
+    margin-top: 20px;
+    line-height: 120%;
 }
 
 #notfound{
