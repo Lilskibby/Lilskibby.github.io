@@ -9,7 +9,7 @@
 }
 
 body{
-    height: 1900px;
+    
 }
 
 .navbarbuttons{
@@ -40,7 +40,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50%;
+    height: 800px;
     text-align: center;
     align-items: center;
     line-height: 24%;;
@@ -86,7 +86,7 @@ body{
 
  #eleventhirty{
     padding-top: 20px;
-    height: 27%;
+    height: 500px;
     background-color:rgba(53, 7, 53, 0.973);
     align-items: center;
     text-align: center;
@@ -128,17 +128,12 @@ body{
     color: black;
     text-align: center;
     font-size: 40pt;
-    height: 20%;
+    height: 500px;
     font-weight: 600;
     padding: 20px;
     font-style: italic;
 }
 
-@media only screen and (min-width: 600px) {
-    .shows {
-      height: 15%
-    }
-}
 
 .showsub{
     font-size: 12pt;
@@ -153,6 +148,7 @@ body{
     align-items: center;
     font-family: sans-serif;
     font-weight: 800;
+    height : 100px;
     align-items: center;
     align-content: center;
     padding-top: 20px;
@@ -183,3 +179,4 @@ hr{
     font-weight: 100;
     font-size: 6pt;
 }
+
