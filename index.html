@@ -11,6 +11,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel = "stylesheet" href = "src/css/customh.css"/>
         <style>
+            @media (max-width: 550px) {
+               .big-container {
+                   display: none;
+               }
+            }
+            @media (min-width: 550px) {
+               .small-container {
+                   display: none;
+               }
+            }
             /* Responsive iFrame */
             .responsive-iframe-container {
                position: relative;
@@ -26,9 +36,9 @@
                top: 0;
                left: 0;
                width: 100%;
-               height: 300px;
+               height: 100%;
             }
-            </style>
+        </style>            
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -74,7 +84,10 @@
             <div class = "showsub">
                 <div class="responsive-iframe-container small-container">
                     <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&showTabs=0&showPrint=0&showNav=0&showDate=0&src=Y291cnR5YXJkQGNvdXJ0eWFyZHRoZWJhbmQuY29t&color=%23039BE5" style="border:solid 1px #777" width="800" height="300" frameborder="0" scrolling="no"></iframe>
-                </div>  
+                </div>
+                <div class="responsive-iframe-container big-container">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=Y291cnR5YXJkQGNvdXJ0eWFyZHRoZWJhbmQuY29t&color=%23039BE5" style="border:solid 1px #777" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
         </div>
         <div class = "contact">
@@ -87,7 +100,7 @@
             <hr>
             <div id = "attributions">
                 <span class = "attribution"> Icons made by Freepik from www.flaticon.com </span>
-                <hr>
+                <br>
                 <span class = "attribution">Website designed by Max Klot</span>
             </div>
         </div>
