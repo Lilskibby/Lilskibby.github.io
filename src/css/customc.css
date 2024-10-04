@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    
+}
+
+html{
+
+    height: 94%;
+
+}
+
+body{
+    height: 100.5%;
+    
+}
+
+
+.navbarbuttons{
+    color: white;
+    text-decoration: none;
+}
+
+.navbarbuttons:hover{
+    color: gray;
+    transition: .3s;
+}
+
+.navbar{
+    background-color: rgba(53, 7, 53, 0.973);
+    margin: 0 0 0;
+    border-radius: 0 0 0 0;
+}
+
+.navbar-brand{
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#contactcont{
+    font-size: x-large;
+    width: 100%;
+    display: inline-flex;
+    font-weight: 800;
+    background-color: rgba(218, 171, 218, 0.9);
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;    
+    min-height: 100%;
+    max-width: 100%;
+    
+}
+
+#abouttxt{
+    color: white;
+    width: 50%;
+    align-self: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-inline: 10px;
+    line-height: 40px;
+}
+
+.emaillbl{
+    text-decoration: underline;
+}
+
+#aboutimg{
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    max-width: 33%;
+    padding: 10px;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+hr{
+    width: 0px;
+}
+
+@media only screen and (max-width: 645px) {
+    #contactcont{
+        display: block;
+    }
+    #abouttxt {
+      width: 100%;
+      font-size: large;
+    }
+    #aboutimg{
+        width: 90%;
+        max-width: 100%;
+    }
+}

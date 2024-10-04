@@ -8,10 +8,6 @@
     background: transparent;
 }
 
-body{
-    
-}
-
 .navbarbuttons{
     color: white;
     text-decoration: none;
@@ -128,7 +124,7 @@ body{
     color: black;
     text-align: center;
     font-size: 40pt;
-    height: 500px;
+    height: auto;
     font-weight: 600;
     padding: 20px;
     font-style: italic;
@@ -178,5 +174,6 @@ hr{
 .attribution{
     font-weight: 100;
     font-size: 6pt;
+    line-height: 10px;
 }
 
