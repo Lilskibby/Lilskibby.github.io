@@ -88,7 +88,7 @@ hr{
     width: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 615px) {
     #about{
         display: block;
     }
@@ -165,7 +165,7 @@ hr{
     bottom: 10%;    
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 615px) {
 
     
         .carousel-caption{
@@ -194,7 +194,7 @@ p, h3{
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 615px) {
     .mugshot{
         width: 50%;
     }
