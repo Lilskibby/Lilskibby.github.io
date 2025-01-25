@@ -242,3 +242,7 @@ hr{
     text-shadow: none;
 }
 
+#out{
+    line-height: normal;
+}
+
