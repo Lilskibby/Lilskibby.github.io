@@ -54,7 +54,30 @@
     flex-direction: row;
     justify-items: center;
     background-color:rgba(53, 7, 53, 0.973);
+}
 
+.tiny-desk{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.tiny-desk-text{
+    Font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.tiny-desk-embed{
+    justify-content: auto;
+    aspect-ratio: 16 / 9;
+    width: 98%;
+    align-self: center;
 }
 
 @media only screen and (max-width: 700px) {
