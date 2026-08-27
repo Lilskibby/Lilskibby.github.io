@@ -34,17 +34,18 @@ export default function MusicSection({ active }) {
   return (
     <section className={`page-section${active ? ' active' : ''}`} id="section-music">
       <div className="content">
-        {/* ─── BIOGRAPHY ───────────────────────────────────────
-             Stubbed to match the longer intro paragraphs on the
-             Professional and Adventure sections. Replace the
-             placeholder paragraph below with your full story. */}
         <p className="section-title">Biography</p>
         <div className="bio-block mb40">
           <p className="bio-placeholder">
-            Write your longer music biography here — how you got started, your influences, your
-            recording process, and any milestones worth sharing. This block is stubbed out and
-            styled to match the rest of the site, so it's ready whenever you want to drop in the
-            full story.
+            Max Klot is a singer-songwriter, producer, engineer, and multi-instrumentalist from Brooklyn, NY. 
+            His music ranges from guitar-focused ballads to upbeat, funky anthems. His writing has a focus on soothing 
+            harmony and intricate lyricism. At 17, he released his self written, performed, recorded, produced debut 
+            album, "Tug of War". 
+
+            <br /><br />
+
+            He currently writes and plays with the Rochester-based pop band he founded, Courtyard. He is in the process
+            of recording more solo material.  
           </p>
         </div>
 
