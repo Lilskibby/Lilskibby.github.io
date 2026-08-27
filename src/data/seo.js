@@ -16,13 +16,13 @@ export const SEO = {
   },
   '/music': {
     section: 'music',
-    title: 'Max Klot — Musician (Courtyard & Solo Artist)',
+    title: 'Max Klot — Music',
     description:
       'Max Klot plays guitar and writes songs with the Rochester-based band Courtyard, and produces solo music under his own name. Listen on Spotify, Apple Music, and YouTube.',
   },
   '/adventure': {
     section: 'adventure',
-    title: 'Max Klot — Adventures & Long-Distance Walks',
+    title: 'Max Klot — Adventures',
     description:
       "Max Klot walks long distances for fun, including a 36-mile trek across New York City. See favorite routes and the places he's walked.",
   },
