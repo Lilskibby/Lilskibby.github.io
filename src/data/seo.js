@@ -10,7 +10,7 @@ export const AUTHOR_SAME_AS = [
 export const SEO = {
   '/': {
     section: 'professional',
-    title: 'Max Klot — Software Developer & Computer Science Student',
+    title: 'Max Klot',
     description:
       'Max Klot is a computer science student at RIT and software developer with experience in Java, Python, Delphi, SQL, and full-stack web development. See projects, experience, and skills.',
   },

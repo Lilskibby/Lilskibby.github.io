@@ -2,7 +2,7 @@
 
 React rewrite of the personal site, built with Vite. Still a fully static
 site (no server/backend) — GitHub Actions builds it and publishes the
-static output to GitHub Pages on every push to `main`.
+static output to GitHub Pages on every push to `main` or `master`.
 
 ## Structure
 
@@ -57,7 +57,31 @@ old setup). The custom domain (`maxklot.com`) is carried over via
 - Bio text, skills, coursework, experience entries: edit the relevant
   file in `src/sections/` or `src/data/experience.js`.
 - Music biography: `src/sections/MusicSection.jsx`, the block marked
-  `BIOGRAPHY` near the bottom — replace the placeholder paragraph.
+  `BIOGRAPHY` near the top — replace the placeholder paragraph.
 - Page titles/descriptions for search engines: `src/data/seo.js`.
 - Images: drop a new file in `src/assets/`, converting to WebP first
   (`cwebp -q 82 input.png -o output.webp`) keeps pages fast.
+- Résumé: edit `resume/resume.docx` directly (Word, Google Docs, etc.) and
+  commit it. `public/resume.pdf` is *generated* from it on every build —
+  see below — so don't edit the PDF by hand, it'll just get overwritten.
+
+## Résumé: editing a Word doc instead of a PDF
+
+`scripts/build-resume.mjs` runs as the first step of `npm run build`. If
+`resume/resume.docx` exists, it uses LibreOffice (`soffice --headless`)
+to export it straight to `public/resume.pdf`, which then gets bundled
+into the site like any other file in `public/`. `public/resume.pdf` is
+gitignored — the `.docx` is the only thing you commit.
+
+If `resume/resume.docx` doesn't exist, the step just skips (useful if you
+haven't set this up yet, or want to keep a plain PDF instead). If it
+exists but the conversion fails (e.g. LibreOffice isn't installed), the
+build logs a warning and continues rather than failing the whole deploy.
+
+**This needs LibreOffice installed wherever `npm run build` runs.** It's
+already added to `.github/workflows/deploy.yml` for CI (see that file's
+"Install LibreOffice" step). To preview the exported PDF locally too,
+install LibreOffice on your machine (free, cross-platform:
+https://www.libreoffice.org/download/download/) — without it, local
+builds just skip the export and reuse whatever `public/resume.pdf`
+already exists on disk.

@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Generated from resume/resume.docx by scripts/build-resume.mjs — the
+# .docx is the source of truth, not this file.
+public/resume.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -13,15 +13,15 @@ export const EXPERIENCE = [
     company: 'Alpine Software',
     role: 'Software Developer',
     location: 'Fairport, NY',
-    date: 'May 2025 – Present',
+    date: 'May 2025 – July 2026',
     badge: 'Co-op',
     description:
       'Alpine Software is a Rochester-based Firehouse Records Management System Software Company. At Alpine, I work closely with our development, support, and implementation teams. I meet with clients and scope requirements for projects within our flagship desktop system, mobile applications and backend services.',
     highlights: [
-      'Create, maintain, and document new and existing software application features.',
-      'Meet and communicate with clients to scope requirements and ensure customer satisfaction',
-      'Train new co-op developers',
-      'Create documentation for common or discovered development processes',
+      'Created, maintained, and documented new and existing software application features.',
+      'Met and communicated with clients to scope requirements and ensure customer satisfaction',
+      'Trained new co-op developers',
+      'Created documentation for common or discovered development processes',
     ],
     tags: ['Delphi', 'SQL', 'Jira', 'Bitbucket', 'Zendesk'],
     photos: [
