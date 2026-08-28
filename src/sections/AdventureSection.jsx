@@ -25,11 +25,11 @@ export default function AdventureSection({ active }) {
           />
           <div className="adv-intro-text">
             <h2>
-              Always
+              Wanderer,
               <br />
-              <em>walking</em>
+              <em>Walker,</em>
               <br />
-              somewhere.
+              Explorer.
             </h2>
             <p>
               When COVID hit in 2020, I was in my sophomore year of high school. My best friend Sam

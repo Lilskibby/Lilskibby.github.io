@@ -154,11 +154,17 @@ body {
   top: 0; left: 0; right: 0;
   height: 4px;
   display: flex;
+  align-items: flex-start;
 }
-.banner-edge-bars span { flex: 1; }
+.banner-edge-bars span { flex: 1; height: 4px; }
 /* Matches the nav banner's visual order: Music, Professional, Adventure */
 .banner-edge-bars span:nth-child(1) { background: var(--accent-music); }
-.banner-edge-bars span:nth-child(2) { background: var(--accent-pro); }
+.banner-edge-bars span:nth-child(2) {
+  background: var(--accent-pro);
+  flex: 1.7;
+  height: 7px;
+  box-shadow: 0 0 12px var(--accent-pro);
+}
 .banner-edge-bars span:nth-child(3) { background: var(--accent-adv); }
 
 .banner-bottom-bars {
@@ -207,6 +213,26 @@ body {
   height: 3px;
   background: #fff;
   border-radius: 2px;
+}
+
+/* Professional is the site's primary section: give its banner button a
+   bigger footprint and a stronger selected treatment than Music/Adventure. */
+.banner-btn--primary {
+  flex: 1.7;
+  font-size: clamp(13px, 2.4vw, 19px);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.75);
+}
+.banner-btn--primary:hover { color: #fff; }
+.banner-btn--primary.active {
+  color: #fff;
+  background: rgba(255,255,255,0.18);
+}
+.banner-btn--primary.active::after {
+  left: 12%; right: 12%;
+  height: 4px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
 .banner-arrow {
@@ -692,6 +718,32 @@ body {
 .music-logo-wrap {
   padding: 0;
 }
+/**. TODO: fix styling for intro text in music section */
+.mus-intro-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.mus-intro-text h2 em {
+  color: var(--accent-music);
+  font-style: italic;
+}
+.mus-intro-text p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text2);
+  max-width: 520px;
+}
+.mus-intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 60px;
+}
 
 .courtyard-img {
   max-width: 420px;
@@ -700,7 +752,7 @@ body {
 }
 
 .max {
-  font-family: 'Palette Mosaic';
+  font-family: 'Palette Mosaic';  
   font-size: 64px;
   word-spacing: 0;
   letter-spacing: 0.05em;

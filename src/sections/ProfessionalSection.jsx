@@ -2,27 +2,27 @@ import computerDrawn from '../assets/computer-drawn.webp'
 import ExperienceCarousel from '../components/ExperienceCarousel.jsx'
 import FooterLinks from '../components/FooterLinks.jsx'
 
-const SKILLS = ['Java', 'C', 'Python', 'Delphi', 'HTML/CSS/JS', 'SQL', 'Jira', 'Git', 'HTML/CSS']
+const SKILLS = ['Java', 'C', 'Python', 'Delphi', 'HTML/CSS/JS', 'SQL', 'Jira', 'Git']
 
 const COURSEWORK = [
-  'CSCI 242- Computer Science for Transfer/AP Students',
-  'CSCI 243- Mechanics of Programming',
-  'CSCI 250- Concepts of Computer Systems',
+  //'CSCI 242- Computer Science for Transfer/AP Students',
+  //'CSCI 243- Mechanics of Programming',
+  //'CSCI 250- Concepts of Computer Systems',
   'CSCI 251- Concepts of Parallel and Distributed Systems',
   'CSCI 261- Analysis of Algorithms',
-  'CSCI 262- Introduction to Computer Science Theory',
+  //'CSCI 262- Introduction to Computer Science Theory',
   'CSCI 320- Principles of Data Management',
   'CSCI 331- Introduction to Artifical Intelligence',
-  'CSCI 471- Professional Communications',
+  //'CSCI 471- Professional Communications',
   'CSCI 662- Foundations of Cryptography',
-  'CSEC 600- Introduction to Computing Security',
+  //'CSEC 600- Introduction to Computing Security',
   'CSEC 603- Enterprise Security',
-  'SWEN 261- Introduction to Software Engineering',
-  'MATH 181- Calculus I',
-  'MATH 182- Calculus II',
-  'MATH 190- Discrete Mathematics for Computing',
-  'MATH 241- Linear Algebra',
-  'MATH 251- Probability and Statistics',
+  //'SWEN 261- Introduction to Software Engineering',
+  //'MATH 181- Calculus I',
+  //'MATH 182- Calculus II',
+  //'MATH 190- Discrete Mathematics for Computing',
+  //'MATH 241- Linear Algebra',
+  //'MATH 251- Probability and Statistics',
 ]
 
 export default function ProfessionalSection({ active }) {
@@ -73,11 +73,15 @@ export default function ProfessionalSection({ active }) {
           <a className="project-card-wrap" href="https://courtyardtheband.com">
             <div className="project-card">
               <h3>courtyardtheband.com</h3>
-              <p>Website I designed for my band, Courtyard.</p>
+              <p>Website I designed for my band, Courtyard. Integrates with
+                bandsintown API to dynamically display show cards. Optimized for 
+                Search Engines and Answer Engines. 
+              </p>
               <div className="project-tags">
-                <span className="ptag">HTML</span>
-                <span className="ptag">CSS</span>
-                <span className="ptag">Bootstrap</span>
+                <span className="ptag">React</span>
+                <span className="ptag">API</span>
+                <span className="ptag">SEO/AEO</span>
+                <span className="ptag">JS/PHP/CSS</span>
               </div>
             </div>
           </a>

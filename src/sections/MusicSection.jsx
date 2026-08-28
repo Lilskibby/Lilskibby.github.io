@@ -34,19 +34,39 @@ export default function MusicSection({ active }) {
   return (
     <section className={`page-section${active ? ' active' : ''}`} id="section-music">
       <div className="content">
-        <p className="section-title">Biography</p>
-        <div className="bio-block mb40">
-          <p className="bio-placeholder">
-            Max Klot is a singer-songwriter, producer, engineer, and multi-instrumentalist from Brooklyn, NY. 
-            His music ranges from guitar-focused ballads to upbeat, funky anthems. His writing has a focus on soothing 
-            harmony and intricate lyricism. At 17, he released his self written, performed, recorded, produced debut 
-            album, "Tug of War". 
+        <div className="mus-intro">
+          <img
+            className="music-guitar-portrait"
+            src={musicDrawn}
+            width={734}
+            height={1100}
+            alt="Max playing guitar"
+            loading={active ? 'eager' : 'lazy'}
+            fetchPriority={active ? 'high' : 'auto'}
+            decoding="async"
+            />
+          <div className="mus-intro-text">
+            <h2>
+                  Singer,
+                  <br />
+                  <em>Songwriter,</em>
+                  <br />
+                  Producer.
+            </h2>
+            <div>
+              <p>
+                Max Klot is a singer-songwriter, producer, engineer, and multi-instrumentalist from Brooklyn, NY. 
+                His music ranges from guitar-focused ballads to upbeat, funky anthems. His writing has a focus on soothing 
+                harmony and intricate lyricism. At 17, he released his self written, performed, recorded, produced debut 
+                album, "Tug of War". 
 
-            <br /><br />
+                <br /><br />
 
-            He currently writes and plays with the Rochester-based pop band he founded, Courtyard. He is in the process
-            of recording more solo material.  
-          </p>
+                He currently writes and plays with the Rochester-based pop band he founded, Courtyard. He is in the process
+                of recording more solo material.  
+              </p>
+            </div>
+          </div>
         </div>
 
         <hr className="accent-divider" />
@@ -112,17 +132,6 @@ export default function MusicSection({ active }) {
               </a>
             </div>
           </div>
-
-          <img
-            className="music-guitar-portrait"
-            src={musicDrawn}
-            width={734}
-            height={1100}
-            alt="Max playing guitar"
-            loading={active ? 'eager' : 'lazy'}
-            fetchPriority={active ? 'high' : 'auto'}
-            decoding="async"
-          />
         </div>
       </div>
     </section>

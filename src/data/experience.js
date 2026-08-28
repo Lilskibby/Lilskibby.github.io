@@ -16,7 +16,7 @@ export const EXPERIENCE = [
     date: 'May 2025 – July 2026',
     badge: 'Co-op',
     description:
-      'Alpine Software is a Rochester-based Firehouse Records Management System Software Company. At Alpine, I work closely with our development, support, and implementation teams. I meet with clients and scope requirements for projects within our flagship desktop system, mobile applications and backend services.',
+      'Alpine Software is a Rochester-based Firehouse Records Management System Software Company. At Alpine, I worked closely with our development, support, and implementation teams. I met with clients and scoped requirements for projects within our flagship desktop system, mobile applications and backend services.',
     highlights: [
       'Created, maintained, and documented new and existing software application features.',
       'Met and communicated with clients to scope requirements and ensure customer satisfaction',
