@@ -11,6 +11,13 @@ import ProfessionalSection from './sections/ProfessionalSection.jsx'
 import MusicSection from './sections/MusicSection.jsx'
 import AdventureSection from './sections/AdventureSection.jsx'
 
+// Section accent colours, mirrored from global.css (--accent-*).
+const SECTION_ACCENT = {
+  professional: '#c0392b',
+  music: '#2c5f8a',
+  adventure: '#b8860b',
+}
+
 function AppShell({ initialPath }) {
   const { path, navigate } = useRouter(initialPath)
   const activeIndex = sectionIndexForPath(path)
@@ -18,6 +25,10 @@ function AppShell({ initialPath }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-section', section)
+    // Keep the mobile browser chrome colour in sync with the banner.
+    const accent = SECTION_ACCENT[section]
+    const meta = document.querySelector('meta[name="theme-color"]')
+    if (meta && accent) meta.setAttribute('content', accent)
   }, [section])
 
   const isFirstRender = useRef(true)
@@ -28,7 +39,10 @@ function AppShell({ initialPath }) {
     }
     // Only scroll on section changes after the initial render, matching
     // the original site (it never auto-scrolled on first load).
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    const reduceMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
   }, [section])
 
   // Prev/next arrows and click-to-select follow the banner's visual

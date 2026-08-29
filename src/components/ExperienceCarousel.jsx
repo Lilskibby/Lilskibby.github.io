@@ -84,6 +84,7 @@ export default function ExperienceCarousel() {
               key={exp.id}
               className={`exp-dot${i === current ? ' active' : ''}`}
               aria-label={`Go to experience ${i + 1}`}
+              aria-current={i === current ? 'true' : undefined}
               onClick={() => goTo(i)}
             />
           ))}

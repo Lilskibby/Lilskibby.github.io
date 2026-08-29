@@ -92,15 +92,15 @@ export default function MusicSection({ active }) {
 
             <hr className="accent-divider" />
 
-            <p className="section-title">Listen &amp; Connect</p>
+            <h3 className="section-title">Listen to Courtyard</h3>
             <div className="music-links">
-              <a className="music-link ghost" href="https://open.spotify.com/artist/4KWXQXPxfdIpt0Dy5OCVJo">
+              <a className="music-link ghost" href="https://open.spotify.com/artist/4KWXQXPxfdIpt0Dy5OCVJo" target="_blank" rel="noopener noreferrer">
                 <SpotifyIcon /> Spotify
               </a>
-              <a className="music-link ghost" href="https://music.apple.com/za/artist/courtyard/1768829490">
+              <a className="music-link ghost" href="https://music.apple.com/za/artist/courtyard/1768829490" target="_blank" rel="noopener noreferrer">
                 <AppleMusicIcon /> Apple Music
               </a>
-              <a className="music-link ghost" href="https://www.youtube.com/@Courtyardtheband">
+              <a className="music-link ghost" href="https://www.youtube.com/@Courtyardtheband" target="_blank" rel="noopener noreferrer">
                 <YouTubeIcon /> YouTube
               </a>
             </div>
@@ -119,15 +119,15 @@ export default function MusicSection({ active }) {
 
             <hr className="accent-divider" />
 
-            <p className="section-title">Listen &amp; Connect</p>
+            <h3 className="section-title">Listen to Max Klot</h3>
             <div className="music-links">
-              <a className="music-link ghost" href="https://open.spotify.com/artist/2TM9TmJScf6KHsGtPeVNLJ">
+              <a className="music-link ghost" href="https://open.spotify.com/artist/2TM9TmJScf6KHsGtPeVNLJ" target="_blank" rel="noopener noreferrer">
                 <SpotifyIcon /> Spotify
               </a>
-              <a className="music-link ghost" href="https://music.apple.com/gb/artist/max-klot/1677962057">
+              <a className="music-link ghost" href="https://music.apple.com/gb/artist/max-klot/1677962057" target="_blank" rel="noopener noreferrer">
                 <AppleMusicIcon /> Apple Music
               </a>
-              <a className="music-link ghost" href="https://www.youtube.com/channel/UCPKmL2H6A8NuqoMd6g3Wttg">
+              <a className="music-link ghost" href="https://www.youtube.com/channel/UCPKmL2H6A8NuqoMd6g3Wttg" target="_blank" rel="noopener noreferrer">
                 <YouTubeIcon /> YouTube
               </a>
             </div>

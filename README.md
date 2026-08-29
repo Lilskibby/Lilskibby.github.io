@@ -46,8 +46,9 @@ locally if you want to sanity-check a production build.
 ## Deployment
 
 `.github/workflows/deploy.yml` builds and publishes `dist/` to GitHub
-Pages automatically on every push to `main`. **One-time setup step:** in
-the repo's Settings → Pages, set "Build and deployment → Source" to
+Pages automatically on every push to `main` or `master`. **One-time setup
+step:** in the repo's Settings → Pages, set "Build and deployment →
+Source" to
 **GitHub Actions** (it's probably set to "Deploy from a branch" from the
 old setup). The custom domain (`maxklot.com`) is carried over via
 `public/CNAME`, which gets copied into the build output automatically.
@@ -56,9 +57,10 @@ old setup). The custom domain (`maxklot.com`) is carried over via
 
 - Bio text, skills, coursework, experience entries: edit the relevant
   file in `src/sections/` or `src/data/experience.js`.
-- Music biography: `src/sections/MusicSection.jsx`, the block marked
-  `BIOGRAPHY` near the top — replace the placeholder paragraph.
+- Music biography: the paragraphs in `src/sections/MusicSection.jsx`.
 - Page titles/descriptions for search engines: `src/data/seo.js`.
+- `public/llms.txt` mirrors the per-section blurbs for AI crawlers —
+  update it alongside `src/data/seo.js` when bios change.
 - Images: drop a new file in `src/assets/`, converting to WebP first
   (`cwebp -q 82 input.png -o output.webp`) keeps pages fast.
 - Résumé: edit `resume/resume.docx` directly (Word, Google Docs, etc.) and

@@ -13,10 +13,13 @@
   System in Delphi and SQL. Also a Student Ambassador Captain at RIT
   Admissions. Skills: Java, C, Python, Delphi, SQL, HTML/CSS/JS, Git,
   Jira. Resume: https://maxklot.com/resume.pdf
-- [Music](https://maxklot.com/music/): Plays guitar and writes songs with
-  Courtyard, a Rochester-based band formed at RIT (pop/jazz/funk
-  influences). Also releases solo music under his own name, self-taught
-  in recording, mixing, and production during the COVID-19 pandemic.
+- [Music](https://maxklot.com/music/): Singer-songwriter, producer,
+  engineer, and multi-instrumentalist from Brooklyn, NY. Released a
+  self-written, -performed, -recorded, and -produced debut album, "Tug of
+  War", at age 17. Plays guitar and writes with Courtyard, a
+  Rochester-based pop band formed at RIT (pop/jazz/funk influences).
+  Self-taught in recording, mixing, and production during the COVID-19
+  pandemic.
 - [Adventure](https://maxklot.com/adventure/): Walks long distances for
   fun, including a 36-mile round trip across New York City (Park Slope to
   Washington Heights and back) during the COVID-19 pandemic.

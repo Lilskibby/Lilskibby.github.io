@@ -12,7 +12,7 @@ const COURSEWORK = [
   'CSCI 261- Analysis of Algorithms',
   //'CSCI 262- Introduction to Computer Science Theory',
   'CSCI 320- Principles of Data Management',
-  'CSCI 331- Introduction to Artifical Intelligence',
+  'CSCI 331- Introduction to Artificial Intelligence',
   //'CSCI 471- Professional Communications',
   'CSCI 662- Foundations of Cryptography',
   //'CSEC 600- Introduction to Computing Security',
@@ -57,7 +57,7 @@ export default function ProfessionalSection({ active }) {
           />
         </div>
 
-        <p className="section-title">Skills &amp; Tools</p>
+        <h3 className="section-title">Skills &amp; Tools</h3>
         <div className="skills-grid mb40">
           {SKILLS.map((s) => (
             <div className="skill-tag" key={s}>
@@ -68,14 +68,19 @@ export default function ProfessionalSection({ active }) {
 
         <hr className="accent-divider" />
 
-        <p className="section-title">Projects</p>
+        <h3 className="section-title">Projects</h3>
         <div className="projects-grid mb40">
-          <a className="project-card-wrap" href="https://courtyardtheband.com">
+          <a
+            className="project-card-wrap"
+            href="https://courtyardtheband.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="project-card">
               <h3>courtyardtheband.com</h3>
               <p>Website I designed for my band, Courtyard. Integrates with
-                bandsintown API to dynamically display show cards. Optimized for 
-                Search Engines and Answer Engines. 
+                bandsintown API to dynamically display show cards. Optimized for
+                Search Engines and Answer Engines.
               </p>
               <div className="project-tags">
                 <span className="ptag">React</span>
@@ -85,12 +90,17 @@ export default function ProfessionalSection({ active }) {
               </div>
             </div>
           </a>
-          <a className="project-card-wrap" href="https://pawsnclaws.pages.dev">
+          <a
+            className="project-card-wrap"
+            href="https://pawsnclaws.pages.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="project-card">
               <h3>U-Fund</h3>
               <p>
                 My <span id="SWEN">Introduction to Software Engineering</span> group project, an
-                angular-based web application designed for a fictitious animal philanthropy group.
+                Angular-based web application designed for a fictitious animal philanthropy group.
                 Won class award for best project.
               </p>
               <div className="project-tags">
@@ -104,12 +114,12 @@ export default function ProfessionalSection({ active }) {
 
         <hr className="accent-divider" />
 
-        <p className="section-title">Experience</p>
+        <h3 className="section-title">Experience</h3>
         <ExperienceCarousel />
 
         <hr className="accent-divider" />
 
-        <p className="section-title">Relevant Coursework</p>
+        <h3 className="section-title">Relevant Coursework</h3>
         <div className="coursework-list mb40">
           {COURSEWORK.map((c) => (
             <div className="course-item" key={c}>
@@ -118,7 +128,7 @@ export default function ProfessionalSection({ active }) {
           ))}
         </div>
 
-        <p className="section-title">Find Me</p>
+        <h3 className="section-title">Find Me</h3>
         <FooterLinks />
       </div>
     </section>

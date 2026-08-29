@@ -33,7 +33,7 @@ export default function AdventureSection({ active }) {
             </h2>
             <p>
               When COVID hit in 2020, I was in my sophomore year of high school. My best friend Sam
-              and I started walking- as far as our legs could take us. We started small, walking
+              and I started walking — as far as our legs could take us. We started small, walking
               from where we lived in Park Slope, to Downtown Brooklyn. Once we made it across the
               Brooklyn Bridge, there was no stopping us. We walked 36 miles in a day, going from our
               neighborhood to Washington Heights, and <span style={{ fontWeight: 'bold' }}>back</span>.
@@ -48,7 +48,7 @@ export default function AdventureSection({ active }) {
 
         <blockquote className="adv-story">"My legs hurt"</blockquote>
 
-        <p className="section-title">Some Favorites</p>
+        <h3 className="section-title">Some Favorites</h3>
         <div className="journey-grid mb40">
           {ROUTES_WALKED.map((route) => (
             <div key={route.id} style={{ overflow: 'hidden', position: 'relative' }}>
@@ -61,13 +61,14 @@ export default function AdventureSection({ active }) {
                 frameBorder="0"
                 scrolling="no"
                 loading="lazy"
+                referrerPolicy="no-referrer"
                 allowFullScreen
               />
             </div>
           ))}
         </div>
 
-        <p className="section-title">Where I've walked</p>
+        <h3 className="section-title">Where I've walked</h3>
         <div className="skills-grid mb40" style={{ '--accent': 'var(--accent-adv)' }}>
           {PLACES.map((p) => (
             <div className="skill-tag" key={p}>

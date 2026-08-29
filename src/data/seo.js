@@ -18,7 +18,7 @@ export const SEO = {
     section: 'music',
     title: 'Max Klot — Music',
     description:
-      'Max Klot plays guitar and writes songs with the Rochester-based band Courtyard, and produces solo music under his own name. Listen on Spotify, Apple Music, and YouTube.',
+      'Max Klot is a Brooklyn-born singer-songwriter, producer, and multi-instrumentalist. He plays guitar and writes with the Rochester band Courtyard and released his solo debut album, Tug of War. Listen on Spotify, Apple Music, and YouTube.',
   },
   '/adventure': {
     section: 'adventure',

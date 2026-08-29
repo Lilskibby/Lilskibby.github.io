@@ -27,12 +27,18 @@ function escapeAttr(str) {
   return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 }
 
+// Canonical URL for a route path — always with a trailing slash, matching
+// the <link rel="canonical"> tags, so structured-data URLs stay consistent.
+function canonicalUrl(path) {
+  return `${SITE_URL}${path === '/' ? '/' : path + '/'}`
+}
+
 function buildJsonLd(path) {
   const person = {
     '@type': 'Person',
     '@id': `${SITE_URL}/#person`,
     name: SITE_NAME,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     jobTitle: 'Software Developer',
     alumniOf: {
       '@type': 'CollegeOrUniversity',
@@ -44,9 +50,9 @@ function buildJsonLd(path) {
   const breadcrumb = {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Professional', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Music', item: `${SITE_URL}/music` },
-      { '@type': 'ListItem', position: 3, name: 'Adventure', item: `${SITE_URL}/adventure` },
+      { '@type': 'ListItem', position: 1, name: 'Professional', item: canonicalUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Music', item: canonicalUrl('/music') },
+      { '@type': 'ListItem', position: 3, name: 'Adventure', item: canonicalUrl('/adventure') },
     ],
   }
 
@@ -69,7 +75,7 @@ function buildJsonLd(path) {
       {
         '@type': 'MusicGroup',
         name: 'Max Klot',
-        url: `${SITE_URL}/music`,
+        url: canonicalUrl('/music'),
         member: { '@id': `${SITE_URL}/#person` },
         sameAs: [
           'https://open.spotify.com/artist/2TM9TmJScf6KHsGtPeVNLJ',
@@ -84,7 +90,7 @@ function buildJsonLd(path) {
 }
 
 function buildHead(path, meta) {
-  const canonical = `${SITE_URL}${path === '/' ? '/' : path + '/'}`
+  const canonical = canonicalUrl(path)
   const title = escapeAttr(meta.title)
   const description = escapeAttr(meta.description)
   const ogImage = `${SITE_URL}/og-image.jpg`
@@ -101,11 +107,12 @@ function buildHead(path, meta) {
 <meta property="og:image" content="${ogImage}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Max Klot">
+<meta property="og:image:alt" content="${escapeAttr(SITE_NAME)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title}">
 <meta name="twitter:description" content="${description}">
 <meta name="twitter:image" content="${ogImage}">
+<meta name="twitter:image:alt" content="${escapeAttr(SITE_NAME)}">
 <script type="application/ld+json">${jsonLd}</script>`
 }
 
@@ -132,5 +139,27 @@ for (const [path, meta] of Object.entries(SEO)) {
 // SPA fallback for any stray/unknown path — same as the homepage.
 await copyFile(join(distDir, 'index.html'), join(distDir, '404.html'))
 
+// Generate sitemap.xml with a build-date <lastmod> (so it's never stale).
+const lastmod = new Date().toISOString().slice(0, 10)
+const sitemap =
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  Object.keys(SEO)
+    .map((path) => {
+      const priority = path === '/' ? '1.0' : '0.8'
+      return (
+        `  <url>\n` +
+        `    <loc>${canonicalUrl(path)}</loc>\n` +
+        `    <lastmod>${lastmod}</lastmod>\n` +
+        `    <changefreq>monthly</changefreq>\n` +
+        `    <priority>${priority}</priority>\n` +
+        `  </url>`
+      )
+    })
+    .join('\n') +
+  `\n</urlset>\n`
+await writeFile(join(distDir, 'sitemap.xml'), sitemap, 'utf-8')
+
 console.log(`Prerendered ${written.length} routes:\n${written.map((p) => ' - ' + p).join('\n')}`)
 console.log(' - ' + join(distDir, '404.html') + ' (fallback)')
+console.log(' - ' + join(distDir, 'sitemap.xml') + ` (lastmod ${lastmod})`)
