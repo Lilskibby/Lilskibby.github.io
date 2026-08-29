@@ -187,6 +187,13 @@ body {
 
 .banner-btn {
   flex: 1;
+  /* Keep the two side buttons to an exact 1:1 flex ratio (min-width:auto
+     would let the longer "ADVENTURE" label push its box wider than
+     "MUSIC", knocking the centered banner — and the portrait above it —
+     off Professional's centre). */
+  min-width: 0;
+  white-space: nowrap;
+  text-align: center;
   background: none;
   border: none;
   color: rgba(255,255,255,0.55);
@@ -200,6 +207,11 @@ body {
   position: relative;
   transition: color 0.2s ease, background 0.2s ease;
 }
+
+/* "ADVENTURE" is far longer than "MUSIC". Above 700px the nav is wide
+   enough for it to render at the base .banner-btn size; the narrow-width
+   override below scales its type down so the label keeps filling the same
+   slot as "MUSIC" instead of overflowing its equal-width box. */
 .banner-btn:hover { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); }
 .banner-btn.active {
   color: #fff;
@@ -219,7 +231,7 @@ body {
    bigger footprint and a stronger selected treatment than Music/Adventure. */
 .banner-btn--primary {
   flex: 1.7;
-  font-size: clamp(13px, 2.4vw, 19px);
+  font-size: clamp(10px, 2.6vw, 19px);
   font-weight: 700;
   letter-spacing: 0.2em;
   color: rgba(255,255,255,0.75);
@@ -233,6 +245,24 @@ body {
   left: 12%; right: 12%;
   height: 4px;
   box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Below 700px the nav spans the full viewport, so it starts to crowd.
+   Shrink "ADVENTURE" to keep it inside its equal-width slot... */
+@media (max-width: 700px) {
+  .banner-btn--adventure {
+    font-size: clamp(9px, 2.2vw, 12px);
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ...and on the narrowest screens dial back Professional's extra width and
+   tracking so its longer label doesn't crowd the side buttons. */
+@media (max-width: 520px) {
+  .banner-btn--primary {
+    flex: 1.35;
+    letter-spacing: 0.06em;
+  }
 }
 
 .banner-arrow {
@@ -904,7 +934,14 @@ body {
   .pro-intro { grid-template-columns: 1fr; }
   .pro-portrait { height: 200px; justify-self: center; }
   .music-hero { grid-template-columns: 1fr; }
-  .music-guitar-portrait { height: 220px; }
+  /* Stack the guitar portrait above the intro text instead of squeezing
+     it into a narrow side column. */
+  .mus-intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+  }
+  .music-guitar-portrait { height: 220px; transform: none; }
   .adv-intro { grid-template-columns: 1fr; }
   .adv-portrait { height: 200px; justify-self: center; }
   .content { padding-bottom: 30px;}

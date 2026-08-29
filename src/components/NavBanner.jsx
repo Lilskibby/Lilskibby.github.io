@@ -24,7 +24,7 @@ export default function NavBanner({ section, onSelectKey, onPrev, onNext }) {
                 key={key}
                 className={`banner-btn${key === section ? ' active' : ''}${
                   key === 'professional' ? ' banner-btn--primary' : ''
-                }`}
+                }${key === 'adventure' ? ' banner-btn--adventure' : ''}`}
                 onClick={() => onSelectKey(key)}
                 aria-current={key === section ? 'page' : undefined}
               >
