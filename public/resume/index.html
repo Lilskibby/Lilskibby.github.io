@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#c0392b">
+<title>Max Klot — Resume</title>
+<meta name="description" content="Résumé for Max Klot, computer science student at RIT and software developer with experience in Java, Python, Delphi, SQL, and full-stack web development.">
+<link rel="canonical" href="https://maxklot.com/resume/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- Open Graph / LinkedIn preview card -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Max Klot">
+<meta property="og:title" content="Max Klot — Resume">
+<meta property="og:description" content="Résumé for Max Klot, computer science student at RIT and software developer with experience in Java, Python, Delphi, SQL, and full-stack web development.">
+<meta property="og:url" content="https://maxklot.com/resume/">
+<meta property="og:image" content="https://maxklot.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Max Klot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Max Klot — Resume">
+<meta name="twitter:description" content="Résumé for Max Klot, computer science student at RIT and software developer.">
+<meta name="twitter:image" content="https://maxklot.com/og-image.jpg">
+
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('theme')
+    if (t !== 'dark' && t !== 'light') {
+      t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    document.documentElement.setAttribute('data-theme', t)
+  } catch (e) {}
+})()
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f5f2ee;
+    --text: #1a1a18;
+    --text2: #4a4a44;
+    --accent: #c0392b;
+    --card-border: rgba(0,0,0,0.08);
+  }
+  [data-theme="dark"] {
+    --bg: #151412;
+    --text: #f0ece4;
+    --text2: #b8b4ac;
+    --card-border: rgba(255,255,255,0.1);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--card-border);
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  header a.back {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  header a.back:hover { color: var(--accent); }
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .actions a {
+    color: #fff;
+    background: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+  }
+  .actions a.secondary {
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--card-border);
+  }
+  .viewer {
+    flex: 1;
+    width: 100%;
+    border: none;
+    display: block;
+  }
+  noscript, .fallback {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text2);
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Max Klot — Résumé</h1>
+    <a class="back" href="https://maxklot.com/">← maxklot.com</a>
+  </div>
+  <div class="actions">
+    <a class="secondary" href="/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    <a href="/resume.pdf" download>Download PDF</a>
+  </div>
+</header>
+<iframe class="viewer" src="/resume.pdf" title="Max Klot resume PDF"></iframe>
+<noscript>
+  <div class="fallback"><a href="/resume.pdf">View the résumé PDF</a></div>
+</noscript>
+</body>
+</html>

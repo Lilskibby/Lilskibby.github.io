@@ -140,11 +140,15 @@ for (const [path, meta] of Object.entries(SEO)) {
 await copyFile(join(distDir, 'index.html'), join(distDir, '404.html'))
 
 // Generate sitemap.xml with a build-date <lastmod> (so it's never stale).
+// Includes the prerendered React routes plus any static-only pages (like
+// the standalone /resume/ viewer, which lives in public/ and isn't part
+// of the SEO/SSR route table).
 const lastmod = new Date().toISOString().slice(0, 10)
+const STATIC_PATHS = ['/resume']
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  Object.keys(SEO)
+  [...Object.keys(SEO), ...STATIC_PATHS]
     .map((path) => {
       const priority = path === '/' ? '1.0' : '0.8'
       return (
