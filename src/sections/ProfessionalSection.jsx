@@ -39,10 +39,11 @@ export default function ProfessionalSection({ active }) {
               problem-solver.
             </h2>
             <p>
-              I'm a fourth year computer science student at the Rochester Institute of Technology.
-              I have experience programming in Java, Python, Delphi, C, and JavaScript/TypeScript. I
-              also have experience with REST, UNIX, SQL, and Web Development. I'm on schedule to
-              complete my B.S. in Computer Science in 2027, and my M.S. in Cybersecurity in 2028!
+              I'm a fourth year student at the Rochester Institute of Technology, finishing up my B.S. in
+              Computer Science and starting out my M.S. in Cybersecurity. I have experience programming in Java, Python, 
+              Delphi, C, and JavaScript/TypeScript. I also have experience with REST, UNIX, SQL, and Web 
+              Development. I'm on schedule to complete my B.S. in Computer Science in May 2027, and my 
+              .S. in Cybersecurity in May 2028!
             </p>
           </div>
           <img
@@ -53,7 +54,7 @@ export default function ProfessionalSection({ active }) {
             alt="Max with laptop"
             loading={active ? 'eager' : 'lazy'}
             fetchPriority={active ? 'high' : 'auto'}
-            decoding="async"
+            decoding="async" 
           />
         </div>
 
