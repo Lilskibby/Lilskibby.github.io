@@ -43,7 +43,7 @@ export default function ProfessionalSection({ active }) {
               Computer Science and starting out my M.S. in Cybersecurity. I have experience programming in Java, Python, 
               Delphi, C, and JavaScript/TypeScript. I also have experience with REST, UNIX, SQL, and Web 
               Development. I'm on schedule to complete my B.S. in Computer Science in May 2027, and my 
-              .S. in Cybersecurity in May 2028!
+              M.S. in Cybersecurity in May 2028!
             </p>
           </div>
           <img

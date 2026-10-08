@@ -36,7 +36,7 @@ export const EXPERIENCE = [
     company: 'Rochester Institute of Technology',
     role: 'Student Ambassador Captain',
     location: 'Henrietta, NY',
-    date: 'Jan 2023 – Present',
+    date: 'Jan 2024 – Present',
     badge: 'Part-Time',
     description:
       'I work with RIT Admissions as a Student Ambassador, giving tours, participating in panels and webinars, engaging with prospective students, and serving as a representative for the University.',
